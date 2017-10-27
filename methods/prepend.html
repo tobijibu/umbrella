@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>prepend | Umbrella - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="http://tr.you84815.space/umbrella/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fx.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-106478577-1', 'auto');
+      //ga('send', 'pageview');
+    </script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/barba.min.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="https://unpkg.com/umbrellajs"></script>
+  </head>
+</html>
+<body>
+  <header>
+    <div class="icon"><a class="no-barba" href="http://tr.you84815.space/"><img src="../img/icon.png"></a></div>
+    <div class="navi_toggle" onclick="toggleMenu()"><i class="menu-icon material-icons" id="navi_icon"></i></div>
+    <div class="title">Umbrella - <a class="no-barba" href="http://tr.you84815.space/">にほんご。</a></div>
+  </header>
+  <script>
+    toggleMenu = function() {
+      let navi = document.getElementsByClassName("navi");
+      navi[0].classList.toggle('show');
+      let navi_icon = document.getElementById("navi_icon");
+      navi_icon.classList.toggle('active');
+    }
+  </script>
+  <div id="barba-wrapper">
+    <div class="barba-container">
+      <div class="wrapper">
+        <div class="navi">
+          <h1><a href="../">Home</a></h1>
+          <h1><a href="../introduction.html">Introduction</a></h1>
+          <h1><a href="../overview.html">Overview</a></h1>
+          <h1 onclick="toggleProperties()"> Properties</h1>
+          <div class="hidden" id="navi_properties">
+            <ul>
+              <li class="length"><a href="../properties/length.html">.length</a></li>
+            </ul>
+          </div>
+          <h1 onclick="toggleMethods()">Methods</h1>
+          <div id="navi_methods">
+            <ul>
+              <li class="add-class"><a href="../methods/add-class.html">.addClass()</a></li>
+              <li class="after"><a href="../methods/after.html">.after()</a></li>
+              <li class="ajax"><a href="../methods/ajax.html">.ajax()</a></li>
+              <li class="append"><a href="../methods/append.html">.append()</a></li>
+              <li class="array"><a href="../methods/array.html">.array()</a></li>
+              <li class="attr"><a href="../methods/attr.html">.attr()</a></li>
+              <li class="before"><a href="../methods/before.html">.before()</a></li>
+              <li class="children"><a href="../methods/children.html">.children()</a></li>
+              <li class="clone"><a href="../methods/clone.html">.clone()</a></li>
+              <li class="closest"><a href="../methods/closest.html">.closest()</a></li>
+              <li class="data"><a href="../methods/data.html">.data()</a></li>
+              <li class="each"><a href="../methods/each.html">.each()</a></li>
+              <li class="empty"><a href="../methods/empty.html">.empty()</a></li>
+              <li class="filter"><a href="../methods/filter.html">.filter()</a></li>
+              <li class="find"><a href="../methods/find.html">.find()</a></li>
+              <li class="first"><a href="../methods/first.html">.first()</a></li>
+              <li class="ajax-fn"><a href="../methods/ajax-fn.html">ajax() fn</a></li>
+              <li class="handle"><a href="../methods/handle.html">.handle()</a></li>
+              <li class="has-class"><a href="../methods/has-class.html">.hasClass()</a></li>
+              <li class="html"><a href="../methods/html.html">.html()</a></li>
+              <li class="is"><a href="../methods/is.html">.is()</a></li>
+              <li class="last"><a href="../methods/last.html">.last()</a></li>
+              <li class="map"><a href="../methods/map.html">.map()</a></li>
+              <li class="not"><a href="../methods/not.html">.not()</a></li>
+              <li class="off"><a href="../methods/off.html">.off()</a></li>
+              <li class="on"><a href="../methods/on.html">.on()</a></li>
+              <li class="parent"><a href="../methods/parent.html">.parent()</a></li>
+              <li class="prepend"><a class="active" href="../methods/prepend.html">.prepend()</a></li>
+              <li class="remove"><a href="../methods/remove.html">.remove()</a></li>
+              <li class="remove-class"><a href="../methods/remove-class.html">.removeClass()</a></li>
+              <li class="replace"><a href="../methods/replace.html">.replace()</a></li>
+              <li class="scroll"><a href="../methods/scroll.html">.scroll()</a></li>
+              <li class="serialize"><a href="../methods/serialize.html">.serialize()</a></li>
+              <li class="siblings"><a href="../methods/siblings.html">.siblings()</a></li>
+              <li class="size"><a href="../methods/size.html">.size()</a></li>
+              <li class="text"><a href="../methods/text.html">.text()</a></li>
+              <li class="toggle-class"><a href="../methods/toggle-class.html">.toggleClass()</a></li>
+              <li class="trigger"><a href="../methods/trigger.html">.trigger()</a></li>
+              <li class="wrap"><a href="../methods/wrap.html">.wrap()</a></li>
+            </ul>
+          </div>
+          <hr>
+          <h1>HTML Source</h1>
+          <div id="navi_source"><a href="https://github.com/tobijibu/umbrella/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/umbrella/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+          <script>
+            toggleProperties = function() {
+              let elem = document.getElementById('navi_properties');
+              elem.classList.toggle('hidden');
+            }
+            toggleMethods = function() {
+              let elem = document.getElementById('navi_methods');
+              elem.classList.toggle('hidden');
+            }
+          </script>
+        </div>
+        <div class="main">
+          <h1>prepend</h1>
+          <h2>.prepend(html, [elements])</h2>
+          <p>マッチした要素の子要素として、HTML要素を先頭に追加します。</p><br>
+          <h3>パラメータ</h3>
+          <dl>
+            <dt><b>html</b><span class="type"> : 下記参照</span></dt>
+            <dd>
+              <ul>
+                <li>以下のいずれかの要素。
+                  <ul>
+                    <li><b>string</b> : 挿入されるHTML。</li>
+                    <li><b>instance</b> : Umbrellaのインスタンス。</li>
+                    <li><b>HTML node</b></li>
+                    <li><b>array</b> : HTML nodeの配列。</li>
+                  </ul>
+                </li>
+                <li>上記のいずれかを返すコールバック。以下のパラメータが渡されます。
+                  <ul>
+                    <li><b>el</b> : <code>elements</code>パラメータの現在の要素。指定されていない場合は<code>{}</code>、数値の場合は<code>i</code>。</li>
+                    <li><b>i</b> : 現在の要素のインデックス。</li>
+                  </ul>
+                </li>
+              </ul>
+            </dd>
+            <dt><b>elements</b><span class="type"> : 下記参照</span></dt>
+            <dd><code>html</code>パラメータにコールバックを指定した場合に有効です。
+              以下のいずれかになります。オプションです。
+              <ul>
+                <li>
+                  コールバックに渡される要素の配列。
+                  コールバックは要素ごとに1回ずつ処理され、全て連続で追加されます。
+                </li>
+                <li>
+                  CSSセレクタ。
+                  マッチした要素ごとに1回ずつ実行されます。
+                </li>
+                <li>
+                  数値。
+                  関数は指定した数値の数だけ実行されます。
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <pre><code class="js">.prepend(html)
+ 
+.prepend(&#x27;&#x3C;div&#x3E;&#x27;)
+.prepend(u(&#x27;&#x3C;div&#x3E;&#x27;))
+.prepend(u(&#x27;&#x3C;div&#x3E;&#x27;).first()) // document.createElement(&#x27;div&#x27;)と同様です。
+.prepend(u(&#x27;&#x3C;div&#x3E;&#x3C;/div&#x3E;&#x3C;div&#x3E;&#x3C;/div&#x3E;&#x27;).nodes)
+.prepend(function(){})
+.prepend(function(el){}, elements)
+.prepend(function(el){}, 10)</code></pre><br>
+          <h3>戻り値</h3>
+          <dl>
+            <dt><b>u</b></dt>
+            <dd>Umbrellaのインスタンスを返します。</dd>
+          </dl><br>
+          <h3>例</h3>
+          <p>各<code>article</code>に、<code>header</code>を追加します。</p>
+          <pre><code class="js">u(&#x27;article&#x27;).prepend(&#x27;&#x3C;header&#x3E;Hello world&#x3C;/header&#x3E;&#x27;);</code></pre><br>
+          <p><code>ul</code>に3つの要素を追加します。
+            以下の例は全て同じ動作になります。
+          </p>
+          <pre><code class="js">// 1つの文字列で全てを追加。
+u(&#x27;ul&#x27;).prepend(&#x27;&#x3C;li&#x3E;One&#x3C;/li&#x3E;&#x3C;li&#x3E;Two&#x3C;/li&#x3E;&#x3C;li&#x3E;Three&#x3C;/li&#x3E;&#x27;);
+ 
+// メソッドチェーンで追加。
+u(&#x27;ul&#x27;).prepend(&#x27;&#x3C;li&#x3E;Three&#x3C;/li&#x3E;&#x27;).append(&#x27;&#x3C;li&#x3E;Two&#x3C;/li&#x3E;&#x27;).append(&#x27;&#x3C;li&#x3E;One&#x3C;/li&#x3E;&#x27;);
+ 
+// functionを使って追加。
+var cb = function(txt){ return &#x27;&#x3C;li&#x3E;&#x27; + txt + &#x27;&#x3C;/li&#x3E;&#x27; };
+u(&#x27;ul&#x27;).prepend(cb, [&#x27;One&#x27;, &#x27;Two&#x27;, &#x27;Three&#x27;]);
+ 
+// ES6の記述で追加。
+u(&#x27;ul&#x27;).prepend(txt =&#x3E; `&#x3C;li&#x3E;${ txt }&#x3C;/li&#x3E;`, [&#x27;One&#x27;, &#x27;Two&#x27;, &#x27;Three&#x27;]);</code></pre>
+          <p>結果は以下になります。</p>
+          <pre><code class="html">&#x3C;ul&#x3E;
+  &#x3C;li&#x3E;One&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Two&#x3C;/li&#x3E;
+  &#x3C;li&#x3E;Three&#x3C;/li&#x3E;
+ 
+  &#x3C;!-- previous data --&#x3E;
+&#x3C;/ul&#x3E;</code></pre><br>
+          <p>HTMLノードを作成して、イベントを追加することもできます。</p>
+          <pre><code class="js">function greeting(){ alert(&#x27;Hello world&#x27;); }
+ 
+u(&#x27;a.main&#x27;).prepend(function(){
+  return u(&#x27;&#x3C;a&#x3E;&#x27;).addClass(&#x27;hi&#x27;).on(&#x27;click&#x27;, greeting).html(&#x27;Greetings!&#x27;);
+});</code></pre><br>
+          <h3>デモ</h3>
+          <p>
+            "デモ用文字列"をクリックすると、
+            "デモ用文字列"の上に、"One"、"Two"、"Three"の文字を追加します。<br>(<code>div#demo</code>の中に3つの<code>div</code>が生成されます。)
+          </p>
+          <div id="demo">デモ用文字列</div>
+          <h4>JavaScript</h4>
+          <pre><code class="js">u('#demo').on('click', function() {
+  var cb = function(txt){ return &#x27;&#x3C;div&#x3E;&#x27; + txt + &#x27;&#x3C;/div&#x3E;&#x27; };
+  u(this).append(cb, ['One', 'Two', 'Three']);
+});</code></pre>
+          <h4>HTML</h4>
+          <pre><code class="html">&#x3C;div id=&#x22;demo&#x22;&#x3E;デモ用文字列&#x3C;/div&#x3E;</code></pre><br>
+          <h3>関連項目</h3>
+          <p><a href="./append.html"><code>.append()</code></a> マッチした要素の子要素として、HTML要素を末尾に追加します。</p>
+          <p><a href="./before.html"><code>.before()</code></a> マッチした要素の前に兄弟要素としてHTML要素を追加します。</p>
+          <p><a href="./after.html"><code>.after()</code></a> マッチした要素の後ろに兄弟要素としてHTML要素を追加します。</p><br>
+          <script class="load">
+            createObj = function() {
+              u('#demo').on('click', function() {
+                var cb = function(txt){ return '<div>' + txt + '</div>' };
+                u(this).prepend(cb, ['One', 'Two', 'Three']);
+              });
+            };
+          </script>
+          <div class="license">
+            <p>
+              &copy; 2014
+               Francisco Presencia Released under the <a href="https://github.com/franciscop/umbrella/blob/master/LICENSE">MIT license</a>
+            </p>
+            <p>このコンテンツはFrancisco Presencia(franciscop)による<a href="https://umbrellajs.com/">Umbrella JSドキュメント</a>を翻訳/改変したものです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><span>
+       &copy; 
+      <script>document.write((new Date()).getFullYear());</script> tobijibu</span></footer>
+  <script src="../js/main.js"></script>
+  <script src="../js/barba_common.js"></script>
+</body>
