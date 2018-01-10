@@ -40,82 +40,166 @@
       navi_icon.classList.toggle('active');
     }
   </script>
-  <div id="barba-wrapper">
-    <div class="barba-container">
-      <div class="wrapper">
-        <div class="navi">
-          <ul>
-            <li><a href="../">Home</a></li>
-            <li><a href="../introduction.html">Introduction</a></li>
-            <li><a href="../overview.html">Overview</a></li>
-            <li><span onclick="toggleProperties()">Properties</span>
-              <ul class="hidden" id="navi_properties">
-                <li class="length"><a href="../properties/length.html">.length</a></li>
-              </ul>
-            </li>
-            <li><span onclick="toggleMethods()">Methods</span>
-              <ul id="navi_methods">
-                <li class="add-class"><a href="../methods/add-class.html">.addClass()</a></li>
-                <li class="after"><a href="../methods/after.html">.after()</a></li>
-                <li class="ajax"><a href="../methods/ajax.html">.ajax()</a></li>
-                <li class="append"><a href="../methods/append.html">.append()</a></li>
-                <li class="array"><a href="../methods/array.html">.array()</a></li>
-                <li class="attr"><a href="../methods/attr.html">.attr()</a></li>
-                <li class="before"><a href="../methods/before.html">.before()</a></li>
-                <li class="children"><a href="../methods/children.html">.children()</a></li>
-                <li class="clone"><a href="../methods/clone.html">.clone()</a></li>
-                <li class="closest"><a href="../methods/closest.html">.closest()</a></li>
-                <li class="data"><a href="../methods/data.html">.data()</a></li>
-                <li class="each"><a href="../methods/each.html">.each()</a></li>
-                <li class="empty"><a href="../methods/empty.html">.empty()</a></li>
-                <li class="filter"><a href="../methods/filter.html">.filter()</a></li>
-                <li class="find"><a href="../methods/find.html">.find()</a></li>
-                <li class="first"><a href="../methods/first.html">.first()</a></li>
-                <li class="ajax-fn"><a href="../methods/ajax-fn.html">ajax() fn</a></li>
-                <li class="handle"><a class="active" href="../methods/handle.html">.handle()</a></li>
-                <li class="has-class"><a href="../methods/has-class.html">.hasClass()</a></li>
-                <li class="html"><a href="../methods/html.html">.html()</a></li>
-                <li class="is"><a href="../methods/is.html">.is()</a></li>
-                <li class="last"><a href="../methods/last.html">.last()</a></li>
-                <li class="map"><a href="../methods/map.html">.map()</a></li>
-                <li class="not"><a href="../methods/not.html">.not()</a></li>
-                <li class="off"><a href="../methods/off.html">.off()</a></li>
-                <li class="on"><a href="../methods/on.html">.on()</a></li>
-                <li class="parent"><a href="../methods/parent.html">.parent()</a></li>
-                <li class="prepend"><a href="../methods/prepend.html">.prepend()</a></li>
-                <li class="remove"><a href="../methods/remove.html">.remove()</a></li>
-                <li class="remove-class"><a href="../methods/remove-class.html">.removeClass()</a></li>
-                <li class="replace"><a href="../methods/replace.html">.replace()</a></li>
-                <li class="scroll"><a href="../methods/scroll.html">.scroll()</a></li>
-                <li class="serialize"><a href="../methods/serialize.html">.serialize()</a></li>
-                <li class="siblings"><a href="../methods/siblings.html">.siblings()</a></li>
-                <li class="size"><a href="../methods/size.html">.size()</a></li>
-                <li class="text"><a href="../methods/text.html">.text()</a></li>
-                <li class="toggle-class"><a href="../methods/toggle-class.html">.toggleClass()</a></li>
-                <li class="trigger"><a href="../methods/trigger.html">.trigger()</a></li>
-                <li class="wrap"><a href="../methods/wrap.html">.wrap()</a></li>
-              </ul>
-            </li>
-            <hr>
-            <li>HTML Source
-              <div id="navi_source"><a href="https://github.com/tobijibu/umbrella/archive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/umbrella/"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
-            </li>
+  <div class="wrapper">
+    <div class="navi">
+      <ul class="menu">
+        <li><a class="index" href="../index.html">Home</a></li>
+        <li><a class="introduction" href="../introduction.html">Introduction</a></li>
+        <li><a class="overview" href="../overview.html">Overview</a></li>
+        <li><span onclick="toggleProperties()">Properties</span>
+          <ul class="hidden" id="navi_properties">
+            <li><a href="../properties/length.html">.length</a></li>
           </ul>
-          <script>
-            toggleProperties = function() {
-              let elem = document.getElementById('navi_properties');
-              elem.classList.toggle('hidden');
-            }
-            toggleMethods = function() {
-              let elem = document.getElementById('navi_methods');
-              elem.classList.toggle('hidden');
-            }
-          </script>
-        </div>
+        </li>
+        <li><span onclick="toggleMethods()">Methods</span>
+          <ul id="navi_methods">
+            <li><a href="../methods/add-class.html">.addClass()</a></li>
+            <li><a href="../methods/after.html">.after()</a></li>
+            <li><a href="../methods/ajax.html">.ajax()</a></li>
+            <li><a href="../methods/append.html">.append()</a></li>
+            <li><a href="../methods/array.html">.array()</a></li>
+            <li><a href="../methods/attr.html">.attr()</a></li>
+            <li><a href="../methods/before.html">.before()</a></li>
+            <li><a href="../methods/children.html">.children()</a></li>
+            <li><a href="../methods/clone.html">.clone()</a></li>
+            <li><a href="../methods/closest.html">.closest()</a></li>
+            <li><a href="../methods/data.html">.data()</a></li>
+            <li><a href="../methods/each.html">.each()</a></li>
+            <li><a href="../methods/empty.html">.empty()</a></li>
+            <li><a href="../methods/filter.html">.filter()</a></li>
+            <li><a href="../methods/find.html">.find()</a></li>
+            <li><a href="../methods/first.html">.first()</a></li>
+            <li><a href="../methods/ajax-fn.html">ajax() fn</a></li>
+            <li><a class="active" href="../methods/handle.html">.handle()</a></li>
+            <li><a href="../methods/has-class.html">.hasClass()</a></li>
+            <li><a href="../methods/html.html">.html()</a></li>
+            <li><a href="../methods/is.html">.is()</a></li>
+            <li><a href="../methods/last.html">.last()</a></li>
+            <li><a href="../methods/map.html">.map()</a></li>
+            <li><a href="../methods/not.html">.not()</a></li>
+            <li><a href="../methods/off.html">.off()</a></li>
+            <li><a href="../methods/on.html">.on()</a></li>
+            <li><a href="../methods/parent.html">.parent()</a></li>
+            <li><a href="../methods/prepend.html">.prepend()</a></li>
+            <li><a href="../methods/remove.html">.remove()</a></li>
+            <li><a href="../methods/remove-class.html">.removeClass()</a></li>
+            <li><a href="../methods/replace.html">.replace()</a></li>
+            <li><a href="../methods/scroll.html">.scroll()</a></li>
+            <li><a href="../methods/serialize.html">.serialize()</a></li>
+            <li><a href="../methods/siblings.html">.siblings()</a></li>
+            <li><a href="../methods/size.html">.size()</a></li>
+            <li><a href="../methods/text.html">.text()</a></li>
+            <li><a href="../methods/toggle-class.html">.toggleClass()</a></li>
+            <li><a href="../methods/trigger.html">.trigger()</a></li>
+            <li><a href="../methods/wrap.html">.wrap()</a></li>
+          </ul>
+        </li>
+      </ul>
+      <hr>
+      <ul>
+        <li>HTML Source
+          <div id="navi_source"><a href="https://github.com/tobijibu/undefinedarchive/master.zip"><i class="menu-icon material-icons">&#xE884;</i></a><a href="https://github.com/tobijibu/undefined"><i class="menu-icon material-icons">&#xE86F;</i></a></div>
+        </li>
+      </ul>
+      <div id="gcs" data-id="017083506626304158170:zhito3aogss">
+        <script>
+          (function() {
+            var cx = document.getElementById('gcs').getAttribute('data-id');
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        </script>
+        <gcse:search linkTarget=""></gcse:search>
+      </div>
+      <style>
+        .cse .gsc-control-cse,
+        .gsc-control-cse {
+          border: 0px solid #fff;
+          padding: 0;
+        }
+        /* 検索ボックス */
+        .gsc-input-box {
+          border: 0px solid #fff;
+          border-bottom: 1px solid #000;
+        }
+        .gsc-search-box-tools .gsc-search-box .gsc-input {
+          padding-right: 0px;
+        }
+        .gsc-search-box .gsc-input>input:hover,
+        .gsc-input-box-hover {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          border-top-color: #fff;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsc-search-box .gsc-input>input:focus,
+        .gsc-input-box-focus {
+          border: 1px solid #fff;
+          border-bottom: 1px solid #333;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        .gsib_a {
+          padding-top: 2px;
+        }
+        .gsst_a .gscb_a {
+          color: #aaa;
+        }
+        /* 検索ボタン */
+        input.gsc-search-button {
+          margin-left: 0;
+        }
+        .cse .gsc-search-button input.gsc-search-button-v2,
+        input.gsc-search-button-v2 {
+          padding: 6px;
+          margin-top: 5px;
+        }
+        .cse input.gsc-search-button,
+        input.gsc-search-button {
+          color: #fff;
+          border: 1px solid #000;
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          background-color: #000;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+        .cse input.gsc-search-button:hover,
+        input.gsc-search-button:hover {
+          color: #333;
+          border-color: #333;
+          background-color: #333;
+          background-image: none;
+          filter: none;
+          transition: .4s;
+        }
+      </style>
+      <script>
+        toggleProperties = function() {
+          let elem = document.getElementById('navi_properties');
+          elem.classList.toggle('hidden');
+        }
+        toggleMethods = function() {
+          let elem = document.getElementById('navi_methods');
+          elem.classList.toggle('hidden');
+        }
+      </script>
+    </div>
+    <div id="barba-wrapper">
+      <div class="barba-container">
         <div class="main">
           <h1>handle</h1>
           <h2>.handle(event1, event2, eventN.., callback)</h2>
-          <p><a href="./on.html"><code>.on()</code></a>メソッドと同じですが、<code>e.preventDefault()</code>を実行するので、
+          <p><a class="no-barba" href="./on.html"><code>.on()</code></a>メソッドと同じですが、<code>e.preventDefault()</code>を実行するので、
             改めて<code>e.preventDefault()</code>を実行する必要はありません。
             つまり、以下の2つは全く同じ処理になります。
           </p>
@@ -127,9 +211,9 @@
   // logic
 });</code></pre><br><br>
           <h3>パラメータ</h3>
-          <p><a href="./on.html"><code>.on()</code></a>を参照してください。</p>
+          <p><a class="no-barba" href="./on.html"><code>.on()</code></a>を参照してください。</p>
           <h3>戻り値</h3>
-          <p><a href="./on.html"><code>.on()</code></a>を参照してください。</p><br>
+          <p><a class="no-barba" href="./on.html"><code>.on()</code></a>を参照してください。</p><br>
           <h3>デモ</h3>
           <p>"PUSH"ボタンを押すと、<code>console.log</code>に'on click'と出力します。</p>
           <button id="demo" type="button">PUSH</button>
@@ -140,9 +224,9 @@
           <h4>HTML</h4>
           <pre><code class="html">&#x3C;button id=&#x22;demo&#x22; type=&#x22;button&#x22;&#x3E;PUSH&#x3C;/button&#x3E;</code></pre><br>
           <h3>関連項目</h3>
-          <p><a href="./on.html"><code>.on()</code></a> イベントがトリガーされた時に関数を呼び出します。</p>
-          <p><a href="./trigger.html"><code>.trigger()</code></a> マッチした全ての要素のイベントを呼び出します。</p>
-          <p><a href="./off.html"><code>.off()</code></a> マッチした要素からイベントを削除します。</p><br>
+          <p><a class="no-barba" href="./on.html"><code>.on()</code></a> イベントがトリガーされた時に関数を呼び出します。</p>
+          <p><a class="no-barba" href="./trigger.html"><code>.trigger()</code></a> マッチした全ての要素のイベントを呼び出します。</p>
+          <p><a class="no-barba" href="./off.html"><code>.off()</code></a> マッチした要素からイベントを削除します。</p><br>
           <script class="load">
             createObj = function() {
               u('#demo').handle('click', function(e){
