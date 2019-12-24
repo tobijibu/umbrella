@@ -1,17 +1,130 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>off | Umbrella - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="off | Umbrella - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/umbrella/favicon.ico"><link rel="stylesheet" href="../css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">Umbrella - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="../index.html">Home</a></li><li><a class="introduction" href="../introduction.html">Introduction</a></li><li><a class="overview" href="../overview.html">Overview</a></li><li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span><ul class="hidden" id="navi_properties"><li><a href="../properties/length.html">.length</a></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span><ul id="navi_methods"><li><a href="../methods/add-class.html">.addClass()</a></li><li><a href="../methods/after.html">.after()</a></li><li><a href="../methods/append.html">.append()</a></li><li><a href="../methods/array.html">.array()</a></li><li><a href="../methods/attr.html">.attr()</a></li><li><a href="../methods/before.html">.before()</a></li><li><a href="../methods/children.html">.children()</a></li><li><a href="../methods/clone.html">.clone()</a></li><li><a href="../methods/closest.html">.closest()</a></li><li><a href="../methods/data.html">.data()</a></li><li><a href="../methods/each.html">.each()</a></li><li><a href="../methods/empty.html">.empty()</a></li><li><a href="../methods/filter.html">.filter()</a></li><li><a href="../methods/find.html">.find()</a></li><li><a href="../methods/first.html">.first()</a></li><li><a href="../methods/handle.html">.handle()</a></li><li><a href="../methods/has-class.html">.hasClass()</a></li><li><a href="../methods/html.html">.html()</a></li><li><a href="../methods/is.html">.is()</a></li><li><a href="../methods/last.html">.last()</a></li><li><a href="../methods/map.html">.map()</a></li><li><a href="../methods/not.html">.not()</a></li><li><a class="active" href="../methods/off.html">.off()</a></li><li><a href="../methods/on.html">.on()</a></li><li><a href="../methods/parent.html">.parent()</a></li><li><a href="../methods/prepend.html">.prepend()</a></li><li><a href="../methods/remove.html">.remove()</a></li><li><a href="../methods/remove-class.html">.removeClass()</a></li><li><a href="../methods/replace.html">.replace()</a></li><li><a href="../methods/scroll.html">.scroll()</a></li><li><a href="../methods/serialize.html">.serialize()</a></li><li><a href="../methods/siblings.html">.siblings()</a></li><li><a href="../methods/size.html">.size()</a></li><li><a href="../methods/text.html">.text()</a></li><li><a href="../methods/toggle-class.html">.toggleClass()</a></li><li><a href="../methods/trigger.html">.trigger()</a></li><li><a href="../methods/wrap.html">.wrap()</a></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>off</h1><div id="update_date"><span>更新日: 2018.09.11
-</span></div><h2>.off(event, listener)</h2><p>マッチした要素からイベントを削除します。</p><pre><code>.off(<span class="hljs-string">'event1'</span>)
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>off | Umbrella - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="off | Umbrella - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/umbrella/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="../js/toggleTheme.js" data-dir="umbrella"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">Umbrella - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="../index.html">Home</a></li>
+          <li><a class="introduction" href="../introduction.html">Introduction</a></li>
+          <li><a class="overview" href="../overview.html">Overview</a></li>
+          <li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span>
+            <ul class="hidden" id="navi_properties">
+              <li><a href="../properties/length.html">.length</a></li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span>
+            <ul id="navi_methods">
+              <li><a href="../methods/add-class.html">.addClass()</a></li>
+              <li><a href="../methods/after.html">.after()</a></li>
+              <li><a href="../methods/append.html">.append()</a></li>
+              <li><a href="../methods/array.html">.array()</a></li>
+              <li><a href="../methods/attr.html">.attr()</a></li>
+              <li><a href="../methods/before.html">.before()</a></li>
+              <li><a href="../methods/children.html">.children()</a></li>
+              <li><a href="../methods/clone.html">.clone()</a></li>
+              <li><a href="../methods/closest.html">.closest()</a></li>
+              <li><a href="../methods/data.html">.data()</a></li>
+              <li><a href="../methods/each.html">.each()</a></li>
+              <li><a href="../methods/empty.html">.empty()</a></li>
+              <li><a href="../methods/filter.html">.filter()</a></li>
+              <li><a href="../methods/find.html">.find()</a></li>
+              <li><a href="../methods/first.html">.first()</a></li>
+              <li><a href="../methods/handle.html">.handle()</a></li>
+              <li><a href="../methods/has-class.html">.hasClass()</a></li>
+              <li><a href="../methods/html.html">.html()</a></li>
+              <li><a href="../methods/is.html">.is()</a></li>
+              <li><a href="../methods/last.html">.last()</a></li>
+              <li><a href="../methods/map.html">.map()</a></li>
+              <li><a href="../methods/not.html">.not()</a></li>
+              <li><a class="active" href="../methods/off.html">.off()</a></li>
+              <li><a href="../methods/on.html">.on()</a></li>
+              <li><a href="../methods/parent.html">.parent()</a></li>
+              <li><a href="../methods/prepend.html">.prepend()</a></li>
+              <li><a href="../methods/remove.html">.remove()</a></li>
+              <li><a href="../methods/remove-class.html">.removeClass()</a></li>
+              <li><a href="../methods/replace.html">.replace()</a></li>
+              <li><a href="../methods/scroll.html">.scroll()</a></li>
+              <li><a href="../methods/serialize.html">.serialize()</a></li>
+              <li><a href="../methods/siblings.html">.siblings()</a></li>
+              <li><a href="../methods/size.html">.size()</a></li>
+              <li><a href="../methods/text.html">.text()</a></li>
+              <li><a href="../methods/toggle-class.html">.toggleClass()</a></li>
+              <li><a href="../methods/trigger.html">.trigger()</a></li>
+              <li><a href="../methods/wrap.html">.wrap()</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>off</h1>
+              <div id="update_date"><span>更新日: 2018.09.11
+</span>
+              </div>
+              <h2>.off(event, listener)</h2>
+              <p>マッチした要素からイベントを削除します。</p>
+              <pre><code>.off(<span class="hljs-string">'event1'</span>)
 .off(<span class="hljs-string">'event1 event2 eventN'</span>)
 .off(<span class="hljs-string">'event1,event2,eventN'</span>)
-.off([<span class="hljs-string">'event1'</span>, <span class="hljs-string">'event2'</span>, <span class="hljs-string">'eventN'</span>])</code></pre><br><h3>パラメータ</h3><dl><dt><b>event</b><span class="type"> : string</span></dt><dd>任意の数のイベント。(<code>click</code>や、<code>mouseover</code>等)</dd><dt><b>listener</b><span class="type"> : function</span></dt><dd>イベントから削除する関数。</dd></dl><br><h3>例</h3><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+.off([<span class="hljs-string">'event1'</span>, <span class="hljs-string">'event2'</span>, <span class="hljs-string">'eventN'</span>])</code></pre><br>
+              <h3>パラメータ</h3>
+              <dl>
+                <dt><b>event</b><span class="type"> : string</span></dt>
+                <dd>任意の数のイベント。(<code>click</code>や、<code>mouseover</code>等)</dd>
+                <dt><b>listener</b><span class="type"> : function</span></dt>
+                <dd>イベントから削除する関数。</dd>
+              </dl><br>
+              <h3>例</h3>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"off-single-test"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"off-multiple-test"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"off-multiple-test"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> listener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> listener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   alert(<span class="hljs-string">'called'</span>);
 }
 
@@ -22,25 +135,65 @@ u(<span class="hljs-string">'.off-multiple-test'</span>).trigger(<span class="hl
 <span class="hljs-comment">//イベントを削除</span>
 u(<span class="hljs-string">'.off-multiple-test'</span>).off(<span class="hljs-string">'click'</span>, listener);
 <span class="hljs-comment">//イベントをトリガー</span>
-u(<span class="hljs-string">'.off-multiple-test'</span>).trigger(<span class="hljs-string">'click'</span>); <span class="hljs-comment">//No alert</span></code></pre><br><h3>デモ</h3><p>"PUSH"ボタンを押すと、"on click"と出力しますが、
-"off"ボタンを押すとイベントが削除され、
-"PUSH"を押しても"on click"を出力しなくなります。</p><div id="demo"><button id="btn" type="button">PUSH</button><button id="off" type="button">off</button><div></div></div><h5>JavaScript</h5><pre><code><span class="hljs-keyword">const</span> listener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+u(<span class="hljs-string">'.off-multiple-test'</span>).trigger(<span class="hljs-string">'click'</span>); <span class="hljs-comment">//No alert</span></code></pre><br>
+              <h3>デモ</h3>
+              <p>
+                "PUSH"ボタンを押すと、"on click"と出力しますが、
+                "off"ボタンを押すとイベントが削除され、
+                "PUSH"を押しても"on click"を出力しなくなります。
+              </p>
+              <div id="demo">
+                <button id="btn" type="button">PUSH</button>
+                <button id="off" type="button">off</button>
+                <div></div>
+              </div>
+              <h5>JavaScript</h5>
+              <pre><code><span class="hljs-keyword">const</span> listener = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   u(<span class="hljs-string">'#demo div'</span>).append(<span class="hljs-string">'&lt;span&gt;on click&lt;/span&gt;'</span>);
 }
 u(<span class="hljs-string">'#btn'</span>).on(<span class="hljs-string">'click'</span>, listener);
 u(<span class="hljs-string">'#off'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   u(<span class="hljs-string">'#btn'</span>).off(<span class="hljs-string">'click'</span>, listener);
-});</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span>
+});</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>PUSH<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>off<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><br><h3>関連項目</h3><p><a class="no-barba" href="./on.html"><code>.on()</code></a> イベントがトリガーされた時に関数を呼び出します。</p><p><a class="no-barba" href="./handle.html"><code>.handle()</code></a> <code>.on()</code>と同様ですが<code>e.preventDefault()</code>を実行します。</p><p><a class="no-barba" href="./trigger.html"><code>.trigger()</code></a> マッチした全ての要素のイベントを呼び出します。</p><script class="load">createObj = function() {
-  const listener = function() {
-    u('#demo div').append('<span>on click</span>');
-  }
-  u('#btn').on('click', listener);
-  u('#off').on('click', function() {
-    u('#btn').off('click', listener);
-  });
-};</script><br><div class="license"><p>&copy; 2014
- Francisco Presencia Released under the <a href="https://github.com/franciscop/umbrella/blob/master/LICENSE">MIT license</a></p><p>このコンテンツはFrancisco Presencia(franciscop)による<a href="https://umbrellajs.com/">Umbrella JSドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="../css/lazy.css" rel="stylesheet"></noscript><script src="../js/main.js" defer></script><script src="https://unpkg.com/umbrellajs"></script><div id="src" hidden></div></body></html>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><br>
+              <h3>関連項目</h3>
+              <p><a class="no-barba" href="./on.html"><code>.on()</code></a> イベントがトリガーされた時に関数を呼び出します。</p>
+              <p><a class="no-barba" href="./handle.html"><code>.handle()</code></a> <code>.on()</code>と同様ですが<code>e.preventDefault()</code>を実行します。</p>
+              <p><a class="no-barba" href="./trigger.html"><code>.trigger()</code></a> マッチした全ての要素のイベントを呼び出します。</p>
+              <script class="load">
+                createObj = function() {
+                  const listener = function() {
+                    u('#demo div').append('<span>on click</span>');
+                  }
+                  u('#btn').on('click', listener);
+                  u('#off').on('click', function() {
+                    u('#btn').off('click', listener);
+                  });
+                };
+              </script><br>
+              <div class="license">
+                <p>
+                  &copy; 2014
+                   Francisco Presencia Released under the <a href="https://github.com/franciscop/umbrella/blob/master/LICENSE">MIT license</a>
+                </p>
+                <p>このコンテンツはFrancisco Presencia(franciscop)による<a href="https://umbrellajs.com/">Umbrella JSドキュメント</a>を翻訳/改変したものです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="../css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="../js/main.js" defer></script>
+    <script src="https://unpkg.com/umbrellajs"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>

@@ -1,42 +1,206 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>is | Umbrella - にほんご。</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:title" content="is | Umbrella - にほんご。"><meta property="og:url"><meta property="og:type" content="article"><link rel="icon" href="https://tr.you84815.space/umbrella/favicon.ico"><link rel="stylesheet" href="../css/main.css"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-106478577-1', 'auto');</script></head><body><div id="container"><header><div class="icon"><a class="no-barba" href="https://tr.you84815.space/"><svg width="16" height="16"><rect width="16" height="16" fill="#e0e0e0"></rect></svg></a></div><div class="navi_toggle" onclick="toggleMenu()"><svg id="menu_close" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><svg id="menu_open" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></div><div class="title">Umbrella - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div></header><div class="navi" id="navi"><ul class="menu"><li><a class="index" href="../index.html">Home</a></li><li><a class="introduction" href="../introduction.html">Introduction</a></li><li><a class="overview" href="../overview.html">Overview</a></li><li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span><ul class="hidden" id="navi_properties"><li><a href="../properties/length.html">.length</a></li></ul></li><li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span><ul id="navi_methods"><li><a href="../methods/add-class.html">.addClass()</a></li><li><a href="../methods/after.html">.after()</a></li><li><a href="../methods/append.html">.append()</a></li><li><a href="../methods/array.html">.array()</a></li><li><a href="../methods/attr.html">.attr()</a></li><li><a href="../methods/before.html">.before()</a></li><li><a href="../methods/children.html">.children()</a></li><li><a href="../methods/clone.html">.clone()</a></li><li><a href="../methods/closest.html">.closest()</a></li><li><a href="../methods/data.html">.data()</a></li><li><a href="../methods/each.html">.each()</a></li><li><a href="../methods/empty.html">.empty()</a></li><li><a href="../methods/filter.html">.filter()</a></li><li><a href="../methods/find.html">.find()</a></li><li><a href="../methods/first.html">.first()</a></li><li><a href="../methods/handle.html">.handle()</a></li><li><a href="../methods/has-class.html">.hasClass()</a></li><li><a href="../methods/html.html">.html()</a></li><li><a class="active" href="../methods/is.html">.is()</a></li><li><a href="../methods/last.html">.last()</a></li><li><a href="../methods/map.html">.map()</a></li><li><a href="../methods/not.html">.not()</a></li><li><a href="../methods/off.html">.off()</a></li><li><a href="../methods/on.html">.on()</a></li><li><a href="../methods/parent.html">.parent()</a></li><li><a href="../methods/prepend.html">.prepend()</a></li><li><a href="../methods/remove.html">.remove()</a></li><li><a href="../methods/remove-class.html">.removeClass()</a></li><li><a href="../methods/replace.html">.replace()</a></li><li><a href="../methods/scroll.html">.scroll()</a></li><li><a href="../methods/serialize.html">.serialize()</a></li><li><a href="../methods/siblings.html">.siblings()</a></li><li><a href="../methods/size.html">.size()</a></li><li><a href="../methods/text.html">.text()</a></li><li><a href="../methods/toggle-class.html">.toggleClass()</a></li><li><a href="../methods/trigger.html">.trigger()</a></li><li><a href="../methods/wrap.html">.wrap()</a></li></ul></li></ul></div><div id="content"><div id="main"><div id="barba-wrapper"><div class="barba-container"><h1>is</h1><div id="update_date"><span>更新日: 2018.09.11
-</span></div><h2>.is(filter)</h2><p>要素がセレクタにマッチするかどうかを確認します。</p><pre><code>.is(<span class="hljs-string">'a'</span>)
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>is | Umbrella - にほんご。</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="is | Umbrella - にほんご。">
+    <meta property="og:url">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="https://tr.you84815.space/umbrella/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link id="theme_style" rel="stylesheet" type="text/css" href="">
+    <script id="srcTheme" src="../js/toggleTheme.js" data-dir="umbrella"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-106478577-1', 'auto');
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="icon"><a class="no-barba" href="https://tr.you84815.space/">
+            <svg width="16" height="16">
+              <rect width="16" height="16" fill="#e0e0e0"></rect>
+            </svg></a></div>
+        <div class="navi_toggle" onclick="toggleMenu()">
+          <svg id="menu_close" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+          </svg>
+          <svg id="menu_open" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </div>
+        <div class="title">Umbrella - <a class="no-barba" href="https://tr.you84815.space/">にほんご。</a></div><span id="toggleTheme">
+          <svg role="img" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"></path>
+          </svg></span>
+      </header>
+      <div class="navi" id="navi">
+        <ul class="menu">
+          <li><a class="index" href="../index.html">Home</a></li>
+          <li><a class="introduction" href="../introduction.html">Introduction</a></li>
+          <li><a class="overview" href="../overview.html">Overview</a></li>
+          <li><span onclick="toggleNaviSubMenu('navi_properties')">Properties</span>
+            <ul class="hidden" id="navi_properties">
+              <li><a href="../properties/length.html">.length</a></li>
+            </ul>
+          </li>
+          <li><span onclick="toggleNaviSubMenu('navi_methods')">Methods</span>
+            <ul id="navi_methods">
+              <li><a href="../methods/add-class.html">.addClass()</a></li>
+              <li><a href="../methods/after.html">.after()</a></li>
+              <li><a href="../methods/append.html">.append()</a></li>
+              <li><a href="../methods/array.html">.array()</a></li>
+              <li><a href="../methods/attr.html">.attr()</a></li>
+              <li><a href="../methods/before.html">.before()</a></li>
+              <li><a href="../methods/children.html">.children()</a></li>
+              <li><a href="../methods/clone.html">.clone()</a></li>
+              <li><a href="../methods/closest.html">.closest()</a></li>
+              <li><a href="../methods/data.html">.data()</a></li>
+              <li><a href="../methods/each.html">.each()</a></li>
+              <li><a href="../methods/empty.html">.empty()</a></li>
+              <li><a href="../methods/filter.html">.filter()</a></li>
+              <li><a href="../methods/find.html">.find()</a></li>
+              <li><a href="../methods/first.html">.first()</a></li>
+              <li><a href="../methods/handle.html">.handle()</a></li>
+              <li><a href="../methods/has-class.html">.hasClass()</a></li>
+              <li><a href="../methods/html.html">.html()</a></li>
+              <li><a class="active" href="../methods/is.html">.is()</a></li>
+              <li><a href="../methods/last.html">.last()</a></li>
+              <li><a href="../methods/map.html">.map()</a></li>
+              <li><a href="../methods/not.html">.not()</a></li>
+              <li><a href="../methods/off.html">.off()</a></li>
+              <li><a href="../methods/on.html">.on()</a></li>
+              <li><a href="../methods/parent.html">.parent()</a></li>
+              <li><a href="../methods/prepend.html">.prepend()</a></li>
+              <li><a href="../methods/remove.html">.remove()</a></li>
+              <li><a href="../methods/remove-class.html">.removeClass()</a></li>
+              <li><a href="../methods/replace.html">.replace()</a></li>
+              <li><a href="../methods/scroll.html">.scroll()</a></li>
+              <li><a href="../methods/serialize.html">.serialize()</a></li>
+              <li><a href="../methods/siblings.html">.siblings()</a></li>
+              <li><a href="../methods/size.html">.size()</a></li>
+              <li><a href="../methods/text.html">.text()</a></li>
+              <li><a href="../methods/toggle-class.html">.toggleClass()</a></li>
+              <li><a href="../methods/trigger.html">.trigger()</a></li>
+              <li><a href="../methods/wrap.html">.wrap()</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              <h1>is</h1>
+              <div id="update_date"><span>更新日: 2018.09.11
+</span>
+              </div>
+              <h2>.is(filter)</h2>
+              <p>要素がセレクタにマッチするかどうかを確認します。</p>
+              <pre><code>.is(<span class="hljs-string">'a'</span>)
 .is(u(<span class="hljs-string">'a'</span>))
-.is(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random() &gt; <span class="hljs-number">0.5</span> })</code></pre><br><h3>パラメータ</h3><dl><dt><b>filter</b><span class="type"> : string</span></dt><dd><ul><li><b>string</b> : チェックするCSSセレクタ。</li><li><b>instance</b> : Umbrellaのインスタンス。</li><li><b>function</b> : 各ノードをチェックし、booleanを返す関数。<br>各ノードのうち、1つでも<code>true</code>を返したならば、
-<code>.is()</code>メソッドは<code>true</code>を返します。<br>この関数は<code>node</code>と<code>index</code>をパラメータとして受け取ります。
-また、<code>this</code>はUmbrellaのインスタンスなので、
-<code>this.slice()</code>のように他の関数を利用することができます。</li></ul></dd></dl><br><h3>戻り値</h3><dl><dt><b>boolean</b></dt><dd>いずれかのノードがセレクタに一致した場合か、
-<code>function</code>が<code>true</code>を返した場合は<code>true</code>を返します。
-それ以外は<code>false</code>を返します。</dd></dl><br><h3>例</h3><p>バリデーションが必要かどうかを返します。</p><pre><code>u(<span class="hljs-string">'form.subscribe'</span>).ajax(<span class="hljs-literal">false</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+.is(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.random() &gt; <span class="hljs-number">0.5</span> })</code></pre><br>
+              <h3>パラメータ</h3>
+              <dl>
+                <dt><b>filter</b><span class="type"> : string</span></dt>
+                <dd>
+                  <ul>
+                    <li><b>string</b> : チェックするCSSセレクタ。</li>
+                    <li><b>instance</b> : Umbrellaのインスタンス。</li>
+                    <li><b>function</b> : 各ノードをチェックし、booleanを返す関数。<br>各ノードのうち、1つでも<code>true</code>を返したならば、
+                      <code>.is()</code>メソッドは<code>true</code>を返します。<br>この関数は<code>node</code>と<code>index</code>をパラメータとして受け取ります。
+                      また、<code>this</code>はUmbrellaのインスタンスなので、
+                      <code>this.slice()</code>のように他の関数を利用することができます。
+                    </li>
+                  </ul>
+                </dd>
+              </dl><br>
+              <h3>戻り値</h3>
+              <dl>
+                <dt><b>boolean</b></dt>
+                <dd>
+                  いずれかのノードがセレクタに一致した場合か、
+                  <code>function</code>が<code>true</code>を返した場合は<code>true</code>を返します。
+                  それ以外は<code>false</code>を返します。
+                </dd>
+              </dl><br>
+              <h3>例</h3>
+              <p>バリデーションが必要かどうかを返します。</p>
+              <pre><code>u(<span class="hljs-string">'form.subscribe'</span>).ajax(<span class="hljs-literal">false</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
 
   <span class="hljs-comment">// u('form.subscribe').hasClass('validate')と同様です</span>
   <span class="hljs-keyword">if</span> (u(<span class="hljs-string">'form.subscribe'</span>).is(<span class="hljs-string">'.validate'</span>)) {
     validate();
   }
-});</code></pre><br><h3>デモ</h3><p>チェックボックスをチェックしてから"PUSH"ボタンを押すと、
-<code>console.log</code>に'Checked!'と出力します。<br>チェックせずに"PUSH"ボタンを押すと、
-<code>console.log</code>に'No Checked!'と出力します。</p><form id="demo"><label><input type="checkbox">CHECK</label><button type="button">PUSH</button><div></div></form><h5>JavaScript</h5><pre><code>u(<span class="hljs-string">'#demo button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+});</code></pre><br>
+              <h3>デモ</h3>
+              <p>
+                チェックボックスをチェックしてから"PUSH"ボタンを押すと、
+                <code>console.log</code>に'Checked!'と出力します。<br>チェックせずに"PUSH"ボタンを押すと、
+                <code>console.log</code>に'No Checked!'と出力します。
+              </p>
+              <form id="demo">
+                <label>
+                  <input type="checkbox">CHECK
+                </label>
+                <button type="button">PUSH</button>
+                <div></div>
+              </form>
+              <h5>JavaScript</h5>
+              <pre><code>u(<span class="hljs-string">'#demo button'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">if</span> (u(<span class="hljs-string">'#demo input'</span>).is(<span class="hljs-string">':checked'</span>)) {
     u(<span class="hljs-string">'#demo div'</span>).append(<span class="hljs-string">'&lt;span&gt;Checked!&lt;/span&gt;&lt;br&gt;'</span>);
   } <span class="hljs-keyword">else</span> {
     u(<span class="hljs-string">'#demo div'</span>).append(<span class="hljs-string">'&lt;span&gt;No Checked!&lt;/span&gt;&lt;br&gt;'</span>);
   }
-});</code></pre><h5>HTML</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span>
+});</code></pre>
+              <h5>HTML</h5>
+              <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span>CHECK<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>PUSH<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><br><h3>関連項目</h3><p><a class="no-barba" href="./filter.html"><code>.filter()</code></a> 不要な要素を除外します。</p><p><a class="no-barba" href="./not.html"><code>.not()</code></a> マッチした全ての要素を除外します。</p><script class="load">createObj = function() {
-  u('#demo button').on('click', function() {
-    if (u('#demo input').is(':checked')) {
-      u('#demo div').append('<span>Checked!</span><br>');
-    } else {
-      u('#demo div').append('<span>No Checked!</span><br>');
-    }
-  });
-};</script><br><div class="license"><p>&copy; 2014
- Francisco Presencia Released under the <a href="https://github.com/franciscop/umbrella/blob/master/LICENSE">MIT license</a></p><p>このコンテンツはFrancisco Presencia(franciscop)による<a href="https://umbrellajs.com/">Umbrella JSドキュメント</a>を翻訳/改変したものです。</p></div></div></div></div></div><footer><span> &copy; <span id="copy_year">2017</span> tobijibu</span></footer></div><noscript id="deferred-styles"><link href="../css/lazy.css" rel="stylesheet"></noscript><script src="../js/main.js" defer></script><script src="https://unpkg.com/umbrellajs"></script><div id="src" hidden></div></body></html>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre><br>
+              <h3>関連項目</h3>
+              <p><a class="no-barba" href="./filter.html"><code>.filter()</code></a> 不要な要素を除外します。</p>
+              <p><a class="no-barba" href="./not.html"><code>.not()</code></a> マッチした全ての要素を除外します。</p>
+              <script class="load">
+                createObj = function() {
+                  u('#demo button').on('click', function() {
+                    if (u('#demo input').is(':checked')) {
+                      u('#demo div').append('<span>Checked!</span><br>');
+                    } else {
+                      u('#demo div').append('<span>No Checked!</span><br>');
+                    }
+                  });
+                };
+              </script><br>
+              <div class="license">
+                <p>
+                  &copy; 2014
+                   Francisco Presencia Released under the <a href="https://github.com/franciscop/umbrella/blob/master/LICENSE">MIT license</a>
+                </p>
+                <p>このコンテンツはFrancisco Presencia(franciscop)による<a href="https://umbrellajs.com/">Umbrella JSドキュメント</a>を翻訳/改変したものです。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><span>&copy; <span id="copy_year">2017</span> tobijibu</span></footer>
+    </div>
+    <noscript id="deferred-styles">
+      <link href="../css/lazy.css" rel="stylesheet">
+    </noscript>
+    <script src="../js/main.js" defer></script>
+    <script src="https://unpkg.com/umbrellajs"></script>
+    <div id="src" hidden></div>
+  </body>
+</html>
